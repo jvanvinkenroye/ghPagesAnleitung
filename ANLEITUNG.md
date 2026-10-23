@@ -83,6 +83,11 @@ einzigen `index.html`.
 4. Prüfe: Die Datei `index.html` muss jetzt **direkt auf der obersten Ebene**
    des Repositorys sichtbar sein, nicht in einem Unterordner.
 
+![Repository-Übersicht mit index.html auf oberster Ebene, Sichtbarkeit Public](img/01-repository-uebersicht.png)
+
+*Neben dem Repository-Namen steht **Public**, `index.html` liegt auf der obersten
+Ebene. Oben rechts in der Reiterleiste (hier nicht im Bild) findest du **Settings**.*
+
 ---
 
 ## Teil 3: GitHub Pages einschalten
@@ -91,12 +96,23 @@ einzigen `index.html`.
 
 1. Im Repository oben auf **Settings** klicken (Zahnrad-Symbol; bei schmalem
    Fenster unter dem Drei-Punkte-Menü **…** versteckt).
-2. In der linken Seitenleiste im Abschnitt **Code and automation** auf **Pages**.
+2. In der linken Seitenleiste im Abschnitt **Code, planning, and automation**
+   ganz unten auf **Pages**.
+
+   <img src="img/02-settings-seitenleiste-pages.png" alt="Seitenleiste der Settings mit dem Eintrag Pages" width="300">
+
 3. Unter **Build and deployment** → **Source**: **Deploy from a branch** wählen.
+   Darunter steht zunächst „GitHub Pages is currently disabled“, der Branch steht
+   auf **None**.
+
+   ![Pages-Einstellungen im Ausgangszustand: Branch None](img/03-pages-source-deaktiviert.png)
+
 4. Unter **Branch**:
-   - Branch: **main** auswählen
-   - Ordner: **/ (root)** auswählen
+   - Im Dropdown **None** den Branch **main** auswählen
+   - Im daneben erscheinenden Ordner-Dropdown **/ (root)** auswählen
 5. **Save** klicken.
+
+   ![Pages-Einstellungen mit Branch main und Ordner root](img/04-pages-branch-main-root.png)
 
 > Die Alternative **GitHub Actions** als Source ist nur nötig, wenn deine Seite
 > vor dem Veröffentlichen gebaut werden muss (z. B. mit einem Static-Site-Generator).
@@ -111,6 +127,11 @@ Nach dem Speichern startet GitHub im Hintergrund einen Build.
   - gelber Kreis = läuft noch
   - grüner Haken = fertig
   - rotes X = Fehler (anklicken für Details)
+
+  ![Actions-Reiter mit laufendem Workflow pages build and deployment](img/05-actions-build-laeuft.png)
+
+  *Der Lauf ist noch „In progress“. Die Liste aktualisiert sich alle 30 Sekunden
+  von selbst. Hinweisbanner wie hier oben können ignoriert werden.*
 - **Typische Wartezeit:** 1–2 Minuten. GitHub gibt an, dass es **bis zu
   10 Minuten** dauern kann, bis Änderungen öffentlich sichtbar sind.
 - Danach in **Settings → Pages** die Seite neu laden. Oben erscheint:
